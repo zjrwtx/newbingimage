@@ -21,8 +21,8 @@ def generate_wallpapers(keyword, output_dir):
 
 
 inputs = [
-    gr.inputs.Textbox(label="请输入搜索关键字", default="Hong Kong, Seaside, 4K, Anime "),
-    gr.inputs.Textbox(label="请输入保存路径", default="./output")
+    gr.inputs.Textbox(label="请输入你想生成的图片是什么样的（语言必须是英文，可以用翻译软件转为英文再复制到这里）", default="Hong Kong, Seaside, 4K, Anime "),
+    gr.inputs.Textbox(label="请输入保存路径，建议默认就好", default="./output")
 ]
 
 outputs = gr.outputs.Textbox(label="状态")
@@ -32,8 +32,8 @@ gr.Interface(
     fn=generate_wallpapers,
     inputs=inputs,
     outputs=outputs,
-    title="Bing 壁纸生成器",
-    description="通过关键词获取 Bing 搜索引擎上与其相关的壁纸图片，并保存到指定文件夹中。",
+    title="小译AI-新必应图片生成的简易可视化界面",
+    description="无需代理和代码基础、小白三步也能拿下AI绘画||公众号：正经人王同学",
     theme="light",
     layout="vertical"
 ).launch()
