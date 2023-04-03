@@ -9,7 +9,7 @@ import asyncio
 
 
 async def async_image_gen(keyword: str, output_dir: str) -> None:
-    async with ImageGenAsync("此处填写你的-U值") as image_generator:
+    async with ImageGenAsync("1hX9rzNnUpZNPc0gzYOZ-8Wbsi-nGjPWQ5mVw5uo6RSS97z_y8WXq36l4Wgs3USzf0kx3hJ4dFGWjAHQ4Vu9xgrmMkBgl0bq0AVE1XY7woh0STPzFjr2HLioE8QqmI9_wyJWbo4JUtU7Pu_JI0gS6rAbiRwNvhWE0wHOw-ybtrcdlTH2EuHQ2cBIOz2pS-4LH_9TLB4Xyi9c_WD9RSqU_iw") as image_generator:
         images = await image_generator.get_images(keyword)
         await image_generator.save_images(images, output_dir=output_dir)
 
